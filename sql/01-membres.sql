@@ -7,12 +7,17 @@ telephone varchar2(10) default null,
 date_adhesion date not null,
 duree number(4) not null
 );
+
 create sequence membres_seq;
+
 
 insert into membres values (membres_seq.nextval,'DUPONT','Anne','10 rue nationale','0102030405',TO_DATE('01/02/2005', 'dd/mm/yyyy'),1);
 insert into membres values (membres_seq.nextval,'DURAND','Paul','11 rue du commerce','0102040608',TO_DATE('10/03/2005', 'dd/mm/yyyy'),6);
 insert into membres values (membres_seq.nextval,'LEFEVRE','Jean','135 avenue des lilas','0203050809',TO_DATE('13/01/2005', 'dd/mm/yyyy'),12);
 insert into membres values (membres_seq.nextval,'MARTIN','Marie','38 boulevard des belges','0304060809',TO_DATE('22/02/2005', 'dd/mm/yyyy'),6);
+insert into membres values (membres_seq.nextval,'EVROUX','Eglantine','34 rue des elfes','0658963125',sysdate-150,6);
+insert into membres values (membres_seq.nextval,'FREGEON','Fernand','11 rue des Francs','0602036987',sysdate-400,6);
+
 commit;
 
 /*select * from membres;
