@@ -17,7 +17,6 @@ commit;
 
 --truncate table exemplaires;
 
-
 /*
 select * from exemplaires;
 drop table exemplaires;
